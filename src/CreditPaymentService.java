@@ -1,9 +1,9 @@
 public class CreditPaymentService {
-    public int calculate(int sc , int kp) {
-        double mps = 0.0999 / 12;
-        double mpsSq = Math.pow(1 + mps, kp);
-        double ep = sc * ((mps * mpsSq) / (mpsSq - 1));
-        int result = (int) ep;
+    public int calculate(int creditSum, int numberOfPayments) {
+        double monthlyPercent = 0.0999 / 12;
+        double monthlyPercSquared = Math.pow(1 + monthlyPercent, numberOfPayments);
+        double monthlyPayment = creditSum * ((monthlyPercent * monthlyPercSquared) / (monthlyPercSquared - 1));
+        int result = (int) monthlyPayment;
         return result;
     }
 }

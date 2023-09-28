@@ -4,8 +4,8 @@ public class Main {
         int creditSum = 1000_000;
         int months = 12;
         CreditPaymentService service = new CreditPaymentService();
-        double ep = service.calculate(creditSum , months);
-        int result = (int) ep;
+        double monthlyPayment = service.calculate(creditSum, months);
+        int result = (int) monthlyPayment;
         System.out.println("Ежемесячный платеж = " + result + " рублей");
     }
 }
